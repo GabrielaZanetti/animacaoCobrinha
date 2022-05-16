@@ -13,6 +13,31 @@ esse é o passo a passo de como fazer a animação da cobrinha que come os commi
 <p>Logo em seguida escolhemos o nome e adicionamos o código</p>
 <img src="img/code.png" title="new actions" max-width="100%">
 <br>
+<p>name: Generate Datas</p>
+<br>
+<p>on:</p>
+<p>   schedule: # execute every 12 hours</p>
+<p>     - cron: "* */12 * * *"</p>
+<p>   workflow_dispatch:</p>
+<p>jobs:</p>
+<p>   build:</p>
+<p>     name: Jobs to update datas</p>
+<p>     runs-on: ubuntu-latest</p>
+<p>     steps:</p>
+<p>       # Snake Animation</p>
+<p>       - uses: Platane/snk@master</p>
+<p>         id: snake-gif</p>
+<p>         with:</p>
+<p>         github_user_name: GabrielaZanetti</p>
+<p>         svg_out_path: dist/github-contribution-grid-snake.svg</p>
+<br>
+<p>       - uses: crazy-max/ghaction-github-pages@v2.1.3</p>
+<p>       with:</p>
+<p>         target_branch: output</p>
+<p>         build_dir: dist</p>
+<p>       env:</p>
+<p>       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}</p>
+<br>
 <p>No código adicionamos exclusivamente o username do GitHub</p>
 <img src="img/code-1.png" title="Código" max-width="100%">
 <br>
