@@ -1,24 +1,31 @@
 # animacaoCobrinha
 esse é o passo a passo de como fazer a animação da cobrinha que come os commits.
-
-Iniciamos no repositorio do perfil, em Actions
-<a src="img/actions.png" title="Actions GitHub" width="100%"></a>
-Criamos um Workflows
-<a src="img/newWorkflows.png" title="New Workflows" width="100%"></a>
-Após criar selecionamos o Simple workflow, onde configuramos ele para carregar a animação da cobrinha.
-<a src="img/configure.png" title="Configuração" width="100%"></a>
-Logo em seguida escolhemos o nome e adicionamos o código
-<a src="img/code.png" title="new actions" width="100%"></a>
-No código adicionamos exclusivamente o username do GitHub
-<a src="img/code-1.png" title="Código" width="100%"></a>
-Em seguida clique em start commit e commita o arquivo para adicionar o arquivo no main
-Selecione novamente o Actions e em Generate Datas estara selecionado o arquivo da cobrinha.yml
-<a src="img/generateDatas.png" title="Gerar Dados" width="100%"></a>
-Cloque em run woekflow e aguarde o carregamento.
-<a src="img/carregando.png" title="Carregando" width="100%"></a>
-<a src="img/concluido.png" title="Concluído" width="100%"></a>
-E por fim adicione no readme a seguinte linha de código:
-
-![Snake animation](https://github.com/GabrielaZanetti/GabrielaZanetti/blob/output/github-contribution-grid-snake.svg)
-
-Apenas mudando seu username.
+<br>
+<p>Iniciamos no repositorio do perfil, em Actions</p>
+<img src="img/actions.png" title="Actions GitHub" max-width="100%">
+<br>
+<p>Criamos um Workflows</p>
+<img src="img/newWorkflows.png" title="New Workflows" max-width="100%">
+<br>
+<p>Após criar selecionamos o Simple workflow, onde configuramos ele para carregar a animação da cobrinha.</p>
+<img src="img/configure.png" title="Configuração" max-width="100%">
+<br>
+<p>Logo em seguida escolhemos o nome e adicionamos o código</p>
+<img src="img/code.png" title="new actions" max-width="100%">
+<br>
+<p>No código adicionamos exclusivamente o username do GitHub</p>
+<img src="img/code-1.png" title="Código" max-width="100%">
+<br>
+<p>Em seguida clique em start commit e commita o arquivo para adicionar o arquivo no main</p>
+<p>Selecione novamente o Actions e em Generate Datas estara selecionado o arquivo da cobrinha.yml</p>
+<img src="img/generateDatas.png" title="Gerar Dados" max-width="100%">
+<br>
+<p>Cloque em run woekflow e aguarde o carregamento.</p>
+<img src="img/carregando.png" title="Carregando" max-width="100%">
+<img src="img/concluido.png" title="Concluído" max-width="100%">
+<br>
+<p>E por fim adicione no readme a seguinte linha de código:</p>
+<br>
+<p>![Snake animation](https://github.com/GabrielaZanetti/GabrielaZanetti/blob/output/github-contribution-grid-snake.svg)</p>
+<br>
+<p>Apenas mudando seu username.</p>
