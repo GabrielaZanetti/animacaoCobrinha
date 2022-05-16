@@ -1,4 +1,4 @@
-# animacaoCobrinha
+# Animação Cobrinha
 esse é o passo a passo de como fazer a animação da cobrinha que come os commits.
 <br>
 <p>Iniciamos no repositorio do perfil, em Actions</p>
