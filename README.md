@@ -29,7 +29,6 @@ on:
     branches:
     - master
     
-  
 
 jobs:
   generate:
@@ -60,9 +59,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-<p>No código adicionamos exclusivamente o username do GitHub</p>
-<img src="img/code-1.png" title="Código" max-width="100%">
-<br>
 <p>Em seguida clique em start commit e commita o arquivo para adicionar o arquivo no main</p>
 <p>Selecione novamente o Actions e em Generate Datas estara selecionado o arquivo da cobrinha.yml</p>
 <img src="img/generateDatas.png" title="Gerar Dados" max-width="100%">
@@ -72,7 +68,19 @@ jobs:
 <img src="img/concluido.png" title="Concluído" max-width="100%">
 <br>
 <p>E por fim adicione no readme a seguinte linha de código:</p>
-<br>
-<p>![Snake animation](https://github.com/GabrielaZanetti/GabrielaZanetti/blob/output/github-contribution-grid-snake.svg)</p>
-<br>
 <p>Apenas mudando seu username.</p>
+
+```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
+</picture>
+```
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
+</picture>
