@@ -1,56 +1,59 @@
-# Animação Cobrinha
-esse é o passo a passo de como fazer a animação da cobrinha que come os commits.
-<br>
-<p>Iniciamos no repositorio do perfil, em Actions</p>
+# Animação de Contribuições (Cobrinha)
+
+Guia atualizado para configurar a animação da cobrinha que consome seus commits no gráfico de contribuições do GitHub.
+
+## 1. Acessar o repositório do perfil
+
+Abra o repositório do seu perfil no GitHub e acesse a aba **Actions**.
+
 <img src="img/actions.png" title="Actions GitHub" max-width="100%">
-<br>
-<p>Criamos um Workflows</p>
+
+## 2. Criar um workflow
+
+Selecione a opção para criar um novo workflow.
+
 <img src="img/newWorkflows.png" title="New Workflows" max-width="100%">
-<br>
-<p>Após criar selecionamos o Simple workflow, onde configuramos ele para carregar a animação da cobrinha.</p>
+
+## 3. Escolher o template
+
+Escolha o template **Simple workflow** para iniciar a configuração.
+
 <img src="img/configure.png" title="Configuração" max-width="100%">
-<br>
-<p>Logo em seguida escolhemos o nome e adicionamos o código</p>
-<img src="img/code.png" title="new actions" max-width="100%">
+
+## 4. Configurar o workflow
+
+Defina um nome para o workflow e adicione o seguinte código:
 
 ```
-name: generate animation
+name: generate snake animation
 
 on:
-  # run automatically every 24 hours
   schedule:
-    - cron: "0 */24 * * *" 
-  
-  # allows to manually run the job at any time
+    - cron: "0 0 * * *"
+
   workflow_dispatch:
-  
-  # run on every push on the master branch
+
   push:
     branches:
-    - master
-    
+      - main
 
 jobs:
   generate:
-    permissions: 
+    permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    
+
     steps:
-      # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
-      - name: generate github-contribution-grid-snake.svg
+      - name: generate snake animation
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-          
-          
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push github-contribution-grid-snake.svg to the output branch
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+
+      - name: publish files
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
@@ -59,25 +62,31 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-<p>Em seguida clique em start commit e commita o arquivo para adicionar o arquivo no main</p>
-<p>Selecione novamente o Actions e em Generate Datas estara selecionado o arquivo da cobrinha.yml</p>
-<img src="img/generateDatas.png" title="Gerar Dados" max-width="100%">
-<br>
-<p>Cloque em run woekflow e aguarde o carregamento.</p>
-<img src="img/carregando.png" title="Carregando" max-width="100%">
-<img src="img/concluido.png" title="Concluído" max-width="100%">
-<br>
-<p>E por fim adicione no readme a seguinte linha de código:</p>
-<p>Apenas mudando seu username.</p>
+<img src="img/code.png" title="Configuração do código" max-width="100%">
+
+## 5. Salvar e executar
+
+Finalize criando o commit diretamente na branch **main**.
+
+Em seguida, volte para a aba **Actions**, selecione o workflow criado e execute manualmente a ação.
+
+<img src="img/generateDatas.png" title="Executar workflow" max-width="100%">
+<img src="img/carregando.png" title="Execução em andamento" max-width="100%">
+<img src="img/concluido.png" title="Execução concluída" max-width="100%">
+
+## 6. Adicionar ao README
+
+Inclua o código abaixo no seu README, substituindo pelo seu nome de usuário:
 
 ```
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SEU-USUARIO/SEU-USUARIO/output/snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SEU-USUARIO/SEU-USUARIO/output/snake.svg">
+  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/SEU-USUARIO/SEU-USUARIO/output/snake.svg">
 </picture>
 ```
 
+## Exemplo
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GabrielaZanetti/GabrielaZanetti/output/github-contribution-grid-snake-dark.svg">
